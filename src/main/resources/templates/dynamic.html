@@ -6,7 +6,9 @@
 </head>
 <body>
     <p>Ovo je dinamična stranica</p>
-    <p th:text="${message}"></p>
+    <ul>
+        <li th:each="service : ${services}" th:text="${service.value}"></li>
+    </ul>
 
     <p th:text="${buildNumber}"></p>
 </body>
